@@ -1,0 +1,221 @@
+﻿
+> portfolio@1.0.0 build
+> vite build
+
+[36mvite v8.0.2 [32mbuilding client environment for production...[36m[39m
+[2K
+transforming...Ô£ô 2673 modules transformed.
+rendering chunks...
+node.exe : [31mÔ£ù[39m 
+Build failed in 1.71s
+At C:\Program 
+Files\nodejs\npm.ps1:29 
+char:3
++   & $NODE_EXE 
+$NPM_CLI_JS $args
++   ~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~
+    + CategoryInfo        
+      : NotSpecified: (  
+  [31mÔ£ù[39m Build fa   
+ iled in 1.71s:String)    
+ [], RemoteException
+    + FullyQualifiedError 
+   Id : NativeCommandErr  
+  or
+ 
+[31merror during build:
+[31mBuild failed with 2 
+errors:
+
+[31m[MISSING_EXPORT] 
+Error:[0m "Github" is 
+not exported by "node_modu
+les/lucide-react/dist/esm/
+lucide-react.js".
+   [38;5;246mÔò¡[0m[38;
+5;246mÔöÇ[0m[38;5;246m[
+[0m src/App.jsx:3:30 
+[38;5;246m][0m
+   [38;5;246mÔöé[0m
+ [38;5;246m3 Ôöé[0m [38
+;5;249mi[0m[38;5;249mm[
+0m[38;5;249mp[0m[38;5;2
+49mo[0m[38;5;249mr[0m[
+38;5;249mt[0m[38;5;249m 
+[0m[38;5;249m{[0m[38;5
+;249m [0m[38;5;249mA[0m
+[38;5;249mr[0m[38;5;249
+mr[0m[38;5;249mo[0m[38
+;5;249mw[0m[38;5;249mU[
+0m[38;5;249mp[0m[38;5;2
+49mR[0m[38;5;249mi[0m[
+38;5;249mg[0m[38;5;249mh
+[0m[38;5;249mt[0m[38;5
+;249m,[0m[38;5;249m [0m
+[38;5;249mM[0m[38;5;249
+ma[0m[38;5;249mi[0m[38
+;5;249ml[0m[38;5;249m,[
+0m[38;5;249m [0mGithub[
+38;5;249m,[0m[38;5;249m 
+[0m[38;5;249mE[0m[38;5
+;249mx[0m[38;5;249mt[0m
+[38;5;249me[0m[38;5;249
+mr[0m[38;5;249mn[0m[38
+;5;249ma[0m[38;5;249ml[
+0m[38;5;249mL[0m[38;5;2
+49mi[0m[38;5;249mn[0m[
+38;5;249mk[0m[38;5;249m,
+[0m[38;5;249m [0m[38;5
+;249mS[0m[38;5;249me[0m
+[38;5;249mn[0m[38;5;249
+md[0m[38;5;249m,[0m[38
+;5;249m [0m[38;5;249mC[
+0m[38;5;249mo[0m[38;5;2
+49md[0m[38;5;249me[0m[
+38;5;249m,[0m[38;5;249m 
+[0m[38;5;249mC[0m[38;5
+;249mp[0m[38;5;249mu[0m
+[38;5;249m,[0m[38;5;249
+m [0m[38;5;249mT[0m[38
+;5;249me[0m[38;5;249mr[
+0m[38;5;249mm[0m[38;5;2
+49mi[0m[38;5;249mn[0m[
+38;5;249ma[0m[38;5;249ml
+[0m[38;5;249m,[0m[38;5
+;249m [0m[38;5;249mM[0m
+[38;5;249me[0m[38;5;249
+mn[0m[38;5;249mu[0m[38
+;5;249m,[0m[38;5;249m [
+0m[38;5;249mX[0m[38;5;2
+49m,[0m[38;5;249m [0m[
+38;5;249mL[0m[38;5;249ma
+[0m[38;5;249my[0m[38;5
+;249mo[0m[38;5;249mu[0m
+[38;5;249mt[0m[38;5;249
+m [0m[38;5;249m}[0m[38
+;5;249m [0m[38;5;249mf[
+0m[38;5;249mr[0m[38;5;2
+49mo[0m[38;5;249mm[0m[
+38;5;249m [0m[38;5;249m"
+[0m[38;5;249ml[0m[38;5
+;249mu[0m[38;5;249mc[0m
+[38;5;249mi[0m[38;5;249
+md[0m[38;5;249me[0m[38
+;5;249m-[0m[38;5;249mr[
+0m[38;5;249me[0m[38;5;2
+49ma[0m[38;5;249mc[0m[
+38;5;249mt[0m[38;5;249m"
+[0m[38;5;249m;[0m
+ [38;5;240m  Ôöé[0m     
+                         
+ÔöÇÔöÇÔöÇÔö¼ÔöÇÔöÇ  
+ [38;5;240m  Ôöé[0m     
+                          
+  Ôò░ÔöÇÔöÇÔöÇÔöÇ Missing 
+export
+[38;5;246mÔöÇÔöÇÔöÇÔò»[0
+m
+
+[31m[MISSING_EXPORT] 
+Error:[0m "SiThreejs" is 
+not exported by "node_modu
+les/react-icons/si/index.m
+js".
+   [38;5;246mÔò¡[0m[38;
+5;246mÔöÇ[0m[38;5;246m[
+[0m src/App.jsx:5:45 
+[38;5;246m][0m
+   [38;5;246mÔöé[0m
+ [38;5;246m5 Ôöé[0m [38
+;5;249mi[0m[38;5;249mm[
+0m[38;5;249mp[0m[38;5;2
+49mo[0m[38;5;249mr[0m[
+38;5;249mt[0m[38;5;249m 
+[0m[38;5;249m{[0m[38;5
+;249m [0m[38;5;249mS[0m
+[38;5;249mi[0m[38;5;249
+mM[0m[38;5;249mo[0m[38
+;5;249mn[0m[38;5;249mg[
+0m[38;5;249mo[0m[38;5;2
+49md[0m[38;5;249mb[0m[
+38;5;249m,[0m[38;5;249m 
+[0m[38;5;249mS[0m[38;5
+;249mi[0m[38;5;249mT[0m
+[38;5;249me[0m[38;5;249
+mn[0m[38;5;249ms[0m[38
+;5;249mo[0m[38;5;249mr[
+0m[38;5;249mf[0m[38;5;2
+49ml[0m[38;5;249mo[0m[
+38;5;249mw[0m[38;5;249m,
+[0m[38;5;249m [0m[38;5
+;249mS[0m[38;5;249mi[0m
+[38;5;249mO[0m[38;5;249
+mp[0m[38;5;249me[0m[38
+;5;249mn[0m[38;5;249ma[
+0m[38;5;249mi[0m[38;5;2
+49m,[0m[38;5;249m 
+[0mSiThreejs[38;5;249m 
+[0m[38;5;249m}[0m[38;5;
+249m [0m[38;5;249mf[0m
+[38;5;249mr[0m[38;5;249m
+o[0m[38;5;249mm[0m[38;
+5;249m [0m[38;5;249m"[0
+m[38;5;249mr[0m[38;5;24
+9me[0m[38;5;249ma[0m[3
+8;5;249mc[0m[38;5;249mt
+[0m[38;5;249m-[0m[38;5;
+249mi[0m[38;5;249mc[0m
+[38;5;249mo[0m[38;5;249m
+n[0m[38;5;249ms[0m[38;
+5;249m/[0m[38;5;249ms[0
+m[38;5;249mi[0m[38;5;24
+9m"[0m[38;5;249m;[0m
+ [38;5;240m  Ôöé[0m     
+                          
+              ÔöÇÔöÇÔöÇÔöÇ
+Ôö¼ÔöÇÔöÇÔöÇÔöÇ  
+ [38;5;240m  Ôöé[0m     
+                          
+                  
+Ôò░ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ 
+Missing export
+[38;5;246mÔöÇÔöÇÔöÇÔò»[0
+m
+[31m
+    at aggregateBindingErr
+orsIntoJsError (file:///D:
+/portfolio/node_modules/ro
+lldown/dist/shared/error-D
+8cGyrC7.mjs:48:18)
+    at 
+unwrapBindingResult (file:
+///D:/portfolio/node_modul
+es/rolldown/dist/shared/er
+ror-D8cGyrC7.mjs:18:128)
+    at #build (file:///D:/
+portfolio/node_modules/rol
+ldown/dist/shared/rolldown
+-build-CL9PyQ2E.mjs:3313:3
+4)
+    at async 
+buildEnvironment (file:///
+D:/portfolio/node_modules/
+vite/dist/node/chunks/node
+.js:32829:64)
+    at async Object.build 
+(file:///D:/portfolio/node
+_modules/vite/dist/node/ch
+unks/node.js:33251:19)
+    at async 
+Object.buildApp (file:///D
+:/portfolio/node_modules/v
+ite/dist/node/chunks/node.
+js:33248:153)
+    at async 
+CAC.<anonymous> (file:///D
+:/portfolio/node_modules/v
+ite/dist/node/cli.js:778:3
+) {
+  errors: [Getter/Setter]
+}[39m

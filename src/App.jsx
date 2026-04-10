@@ -4,11 +4,16 @@ import {
   ArrowUpRight, ExternalLink, Send,
   Code, Cpu, Terminal, Menu, X, Layout, Box,
   Database, FileText, Download, GraduationCap,
-  Briefcase, Award, ChevronRight, Globe
+  Briefcase, Award, ChevronRight, Globe, Users
 } from 'lucide-react'
 import { FaLinkedin, FaGithub, FaEnvelope, FaReact, FaNodeJs, FaPython, FaBrain } from 'react-icons/fa'
 import { SiMongodb, SiTensorflow, SiOpenai, SiFastapi, SiScikitlearn, SiPostgresql, SiLangchain } from 'react-icons/si'
 import profilePic from './assets/profile.jpg'
+import ttsLogo from './assets/ttsnashik_logo.jpg'
+import sumagoLogo from './assets/sumago.png'
+import hanokImg from './assets/hanok_grill.png'
+import nexoImg from './assets/nexo_platform.png'
+import resumeBuilderImg from './assets/ai_resume_builder.png'
 
 const HeroCanvas = React.lazy(() => import('./components/HeroCanvas'))
 
@@ -49,20 +54,20 @@ const Navbar = () => {
 
         <div className="nav-right">
           <a href={LINKEDIN} target="_blank" rel="noopener noreferrer" className="social-icon" title="LinkedIn">
-            <FaLinkedin />
+            <FaLinkedin size={20} />
           </a>
           <a href={GITHUB} target="_blank" rel="noopener noreferrer" className="social-icon" title="GitHub">
-            <FaGithub />
+            <FaGithub size={20} />
           </a>
           <a href={`mailto:${EMAIL}`} className="social-icon" title="Email">
-            <FaEnvelope />
+            <FaEnvelope size={20} />
           </a>
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="mobile-menu-btn"
             aria-label="Toggle menu"
           >
-            {isOpen ? <X size={22} /> : <Menu size={22} />}
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </nav>
@@ -82,9 +87,9 @@ const Navbar = () => {
               </a>
             ))}
             <div className="mobile-menu-socials">
-              <a href={LINKEDIN} target="_blank" rel="noopener noreferrer" className="social-icon"><FaLinkedin /></a>
-              <a href={GITHUB}   target="_blank" rel="noopener noreferrer" className="social-icon"><FaGithub /></a>
-              <a href={`mailto:${EMAIL}`} className="social-icon"><FaEnvelope /></a>
+              <a href={LINKEDIN} target="_blank" rel="noopener noreferrer" className="social-icon"><FaLinkedin size={20} /></a>
+              <a href={GITHUB}   target="_blank" rel="noopener noreferrer" className="social-icon"><FaGithub size={20} /></a>
+              <a href={`mailto:${EMAIL}`} className="social-icon"><FaEnvelope size={20} /></a>
             </div>
           </motion.div>
         )}
@@ -96,11 +101,7 @@ const Navbar = () => {
 // ─── Page 1: Hero ─────────────────────────────────────────────────────────────
 const Hero = () => (
   <section id="home" className="hero-section">
-    <div className="hero-canvas">
-      <Suspense fallback={null}>
-        <HeroCanvas />
-      </Suspense>
-    </div>
+    <div className="hero-canvas" />
 
     <div className="hero-grid container">
 
@@ -117,7 +118,7 @@ const Hero = () => (
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.85, delay: 0.42 }}
         >
-          Fullstack <br />
+          Fullstack
           <span className="hero-title-accent">AI Engineer</span>
         </motion.h1>
 
@@ -127,9 +128,9 @@ const Hero = () => (
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.56 }}
         >
-          A passionate fresher specializing in the MERN stack fused with cutting-edge AI —
-          from machine learning and data science to agentic pipelines and prompt engineering.
-          Building intelligent apps that make a difference.
+          A passionate fresher specializing in the MERN stack, focused on cutting edge AI
+          including machine learning, data science, agentic pipelines, and prompt engineering.
+          Building intelligent applications that create real impact.
         </motion.p>
 
         <motion.div
@@ -141,12 +142,14 @@ const Hero = () => (
           <a href="#projects" className="btn btn-primary">
             View Projects
           </a>
-          <a href="#skills" className="btn btn-outline">
-            My Skills
-          </a>
-          <a href={LINKEDIN} target="_blank" rel="noopener noreferrer" className="btn btn-ghost">
-            <FaLinkedin size={16} />
-          </a>
+          <div className="hero-social-wrap">
+            <a href={LINKEDIN} target="_blank" rel="noopener noreferrer" className="social-icon" title="LinkedIn">
+              <FaLinkedin size={20} />
+            </a>
+            <a href={GITHUB} target="_blank" rel="noopener noreferrer" className="social-icon" title="GitHub">
+              <FaGithub size={20} />
+            </a>
+          </div>
         </motion.div>
       </motion.div>
 
@@ -172,192 +175,77 @@ const Hero = () => (
 )
 
 // ─── Page 2: Skills ───────────────────────────────────────────────────────────
-const SKILL_CATEGORIES = [
+const SKILL_DATA = [
   {
-    title: 'Frontend',
-    icon: <Globe size={20} />,
-    color: '#61dafb',
-    skills: [
-      { name: 'React.js', icon: <FaReact />, level: 85 },
-      { name: 'Next.js', icon: <FaReact />, level: 75 },
-      { name: 'HTML / CSS / JS', icon: <Code size={14} />, level: 90 },
-      { name: 'Framer Motion', icon: <Layout size={14} />, level: 70 },
-    ]
+    category: 'Frontend',
+    skills: ['React.js', 'HTML5', 'CSS3']
   },
   {
-    title: 'Backend',
-    icon: <Terminal size={20} />,
-    color: '#87cf3e',
-    skills: [
-      { name: 'Node.js / Express', icon: <FaNodeJs />, level: 82 },
-      { name: 'Python', icon: <FaPython />, level: 88 },
-      { name: 'FastAPI', icon: <SiFastapi />, level: 80 },
-      { name: 'REST APIs', icon: <Globe size={14} />, level: 85 },
-    ]
+    category: 'Backend',
+    skills: ['Node.js', 'Express', 'Python', 'FastAPI']
   },
   {
-    title: 'Databases',
-    icon: <Database size={20} />,
-    color: '#f0c060',
-    skills: [
-      { name: 'MongoDB', icon: <SiMongodb />, level: 80 },
-      { name: 'PostgreSQL', icon: <SiPostgresql />, level: 70 },
-      { name: 'MySQL', icon: <Database size={14} />, level: 72 },
-      { name: 'Firebase', icon: <Database size={14} />, level: 65 },
-    ]
+    category: 'AI / ML',
+    skills: ['Machine Learning', 'TensorFlow', 'Computer Vision', 'Prompt Engineering']
   },
   {
-    title: 'AI / ML',
-    icon: <Cpu size={20} />,
-    color: '#c9a882',
-    skills: [
-      { name: 'Machine Learning', icon: <SiScikitlearn />, level: 78 },
-      { name: 'TensorFlow', icon: <SiTensorflow />, level: 72 },
-      { name: 'Prompt Engineering', icon: <SiOpenai />, level: 85 },
-      { name: 'Agentic AI (LangChain)', icon: <SiOpenai />, level: 75 },
-    ]
-  },
-  {
-    title: 'Data Science',
-    icon: <FaBrain size={20} />,
-    color: '#5c8aff',
-    skills: [
-      { name: 'Pandas / NumPy', icon: <FaPython />, level: 82 },
-      { name: 'Data Visualization', icon: <Layout size={14} />, level: 75 },
-      { name: 'Scikit-learn', icon: <SiScikitlearn />, level: 78 },
-      { name: 'Data Cleaning', icon: <Database size={14} />, level: 80 },
-    ]
-  },
-  {
-    title: 'Tools & More',
-    icon: <Award size={20} />,
-    color: '#ff8c42',
-    skills: [
-      { name: 'Git / GitHub', icon: <FaGithub />, level: 88 },
-      { name: 'VS Code', icon: <Code size={14} />, level: 90 },
-      { name: 'Docker (basics)', icon: <Box size={14} />, level: 55 },
-      { name: 'Linux CLI', icon: <Terminal size={14} />, level: 70 },
-    ]
-  },
+    category: 'Tools',
+    skills: ['Git / GitHub', 'VS Code', 'Docker', 'Postman']
+  }
 ]
 
-const SkillBar = ({ name, icon, level, color }) => (
-  <div className="skill-bar-item">
-    <div className="skill-bar-header">
-      <span className="skill-bar-icon" style={{ color }}>{icon}</span>
-      <span className="skill-bar-name">{name}</span>
-    </div>
-    <div className="skill-bar-track">
-      <motion.div
-        className="skill-bar-fill"
-        style={{ background: `linear-gradient(90deg, ${color}99, ${color})` }}
-        initial={{ width: 0 }}
-        whileInView={{ width: `${level}%` }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.9, ease: 'easeOut', delay: 0.1 }}
-      />
-    </div>
-  </div>
-)
+const Skills = () => {
+  return (
+    <section id="skills" className="section skill-aesthetic-section">
+      <div className="container">
+        <div className="section-header">
+          <div className="section-label">Expertise</div>
+          <h2>
+            What I Work{' '}
+            <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--primary-color)' }}>
+              With
+            </span>
+          </h2>
+        </div>
 
-const SkillCard = ({ category, index }) => (
-  <motion.div
-    className="skill-card"
-    initial={{ opacity: 0, y: 32 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
-    transition={{ duration: 0.6, delay: index * 0.08 }}
-  >
-    <div className="skill-card-header">
-      <span className="skill-card-icon" style={{ color: category.color, background: `${category.color}18` }}>
-        {category.icon}
-      </span>
-      <h3 className="skill-card-title">{category.title}</h3>
-    </div>
-    <div className="skill-bars">
-      {category.skills.map(s => (
-        <SkillBar key={s.name} {...s} color={category.color} />
-      ))}
-    </div>
-  </motion.div>
-)
-
-const Skills = () => (
-  <section id="skills" className="section" style={{ background: 'var(--bg-secondary)' }}>
-    <div className="container">
-      <motion.div
-        className="section-header"
-        initial={{ opacity: 0, y: 24 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-      >
-        <div className="section-label">What I Know</div>
-        <h2>
-          My{' '}
-          <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--primary-color)' }}>
-            Skillset
-          </span>
-        </h2>
-        <p className="section-subtitle">
-          A fresher with strong fundamentals across the full stack and AI ecosystem — always learning, always building.
-        </p>
-      </motion.div>
-
-      <div className="skills-grid">
-        {SKILL_CATEGORIES.map((cat, i) => (
-          <SkillCard key={cat.title} category={cat} index={i} />
-        ))}
+        <div className="skills-aesthetic-grid">
+          {SKILL_DATA.map((item) => (
+            <div key={item.category} className="skill-glass-card">
+              <h3 className="skill-glass-title">{item.category}</h3>
+              <div className="skill-glass-tags">
+                {item.skills.map((s) => (
+                  <span key={s} className="skill-glass-pill">{s}</span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
-  </section>
-)
+    </section>
+  )
+}
 
 // ─── Page 3: Journey / Timeline ───────────────────────────────────────────────
 const TIMELINE = [
   {
-    year: '2024 – Present',
-    icon: <Briefcase size={18} />,
+    year: 'Nov 2025 – Feb 2026',
+    icon: <img src={ttsLogo} alt="Technokraft" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />,
+    hasLogo: true,
     type: 'project',
-    title: 'Fullstack AI Intern / Developer',
-    org: 'AI Innovation Hub (Simulated)',
-    desc: 'Actively building production-ready AI applications, integrating LLMs into full-stack MERN environments, and optimizing ML models for real-world use cases.',
-    tags: ['MERN Stack', 'Agentic AI', 'Ongoing'],
+    title: 'Full Stack Intern',
+    org: 'Technokraft Training & Solution Pvt. Ltd.',
+    desc: 'Developed robust full-stack applications and architected scalable backend APIs using the MERN stack.',
+    tags: ['MERN Stack', 'APIs', 'Web Development'],
   },
   {
-    year: '2024',
-    icon: <Award size={18} />,
-    type: 'achievement',
-    title: 'Top Performer - AI Hackathon',
-    org: 'National Tech Summit',
-    desc: 'Won 1st place for developing the "AI Resume Filter System" which utilized advanced NLP for semantic candidate matching.',
-    tags: ['First Place', 'NLP', 'Innovation'],
-  },
-  {
-    year: '2024',
-    icon: <Briefcase size={18} />,
-    type: 'education',
-    title: 'CS Undergraduate (AI Specialization)',
-    org: 'University Name',
-    desc: 'Consistently maintaining high academic standing with a focus on Deep Learning and Advanced Web Architectures.',
-    tags: ['Education', '3.5+ CGPA'],
-  },
-  {
-    year: '2023',
-    icon: <Briefcase size={18} />,
+    year: 'Jan 2026 – Feb 2026',
+    icon: <img src={sumagoLogo} alt="Sumago" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />,
+    hasLogo: true,
     type: 'project',
-    title: 'Web & AI Research Intern',
-    org: 'Personal R&D',
-    desc: 'Researched and implemented Computer Vision pipelines (OpenCV) for virtual try-on experiences and e-waste classification systems.',
-    tags: ['Python', 'TensorFlow', 'Research'],
-  },
-  {
-    year: '2023',
-    icon: <Award size={18} />,
-    type: 'achievement',
-    title: 'Certification: Fullstack Engineering',
-    org: 'Global EdTech',
-    desc: 'Earned professional certification after completing 12 weeks of intensive project-based learning in MERN and Cloud basics.',
-    tags: ['Certified', '10+ Projects'],
+    title: 'AIML & Data Science Intern',
+    org: 'Sumago Infotech Pvt. Ltd.',
+    desc: 'Optimized machine learning models and refined data preprocessing pipelines for enterprise-level applications.',
+    tags: ['Python', 'Machine Learning', 'Data Science'],
   },
 ]
 
@@ -370,36 +258,45 @@ const typeColors = {
 
 const TimelineItem = ({ item, index }) => (
   <motion.div
-    className={`timeline-item ${index % 2 === 0 ? 'left' : 'right'}`}
-    initial={{ opacity: 0, x: index % 2 === 0 ? -40 : 40 }}
-    whileInView={{ opacity: 1, x: 0 }}
+    className="h-timeline-item"
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
-    transition={{ duration: 0.65, delay: 0.1 }}
+    transition={{ duration: 0.6, delay: index * 0.2 }}
   >
-    <div className="timeline-content">
-      <div className="timeline-year">{item.year}</div>
-      <div className="timeline-card">
-        <div className="timeline-card-icon" style={{ background: `${typeColors[item.type]}20`, color: typeColors[item.type] }}>
+    <div className="h-timeline-dot-wrap">
+      <div className="h-timeline-dot" style={{ background: typeColors[item.type] }} />
+      <div className="h-timeline-connector" />
+    </div>
+    
+    <div className="h-timeline-content">
+      <div className="h-timeline-year">{item.year}</div>
+      <div className="h-timeline-card">
+        <div className="h-timeline-card-icon" style={{ 
+          background: item.hasLogo ? '#fff' : `${typeColors[item.type]}20`, 
+          color: typeColors[item.type],
+          padding: item.hasLogo ? '6px' : '0'
+        }}>
           {item.icon}
         </div>
-        <div className="timeline-card-body">
-          <h3 className="timeline-title">{item.title}</h3>
-          <div className="timeline-org">{item.org}</div>
-          <p className="timeline-desc">{item.desc}</p>
-          <div className="timeline-tags">
+        <div className="h-timeline-body">
+          <h3 className="h-timeline-title">{item.title}</h3>
+          <div className="h-timeline-org">{item.org}</div>
+          <p className="h-timeline-desc">{item.desc}</p>
+          <div className="h-timeline-tags">
             {item.tags.map(t => (
-              <span key={t} className="timeline-tag">{t}</span>
+              <span key={t} className="h-timeline-tag">{t}</span>
             ))}
           </div>
         </div>
       </div>
     </div>
-    <div className="timeline-dot" style={{ background: typeColors[item.type] }} />
   </motion.div>
 )
 
+
 const Journey = () => (
-  <section id="journey" className="section">
+  <section id="journey" className="section h-timeline-section">
     <div className="container">
       <motion.div
         className="section-header"
@@ -407,7 +304,7 @@ const Journey = () => (
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
       >
-        <div className="section-label">Experience & Awards</div>
+        <div className="section-label">Experience</div>
         <h2>
           Work{' '}
           <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--primary-color)' }}>
@@ -415,19 +312,21 @@ const Journey = () => (
           </span>
         </h2>
         <p className="section-subtitle">
-          My professional growth, internships, and technical milestones in the AI and Web ecosystem.
+          My professional growth and internships in the AI and Web ecosystem.
         </p>
       </motion.div>
 
-      <div className="timeline-wrapper">
-        <div className="timeline-line" />
-        {TIMELINE.map((item, i) => (
-          <TimelineItem key={i} item={item} index={i} />
-        ))}
+      <div className="h-timeline-wrapper">
+        <div className="h-timeline-items">
+          {TIMELINE.map((item, i) => (
+            <TimelineItem key={i} item={item} index={i} />
+          ))}
+        </div>
       </div>
     </div>
   </section>
 )
+
 
 // ─── Marquee ──────────────────────────────────────────────────────────────────
 const TECH = [
@@ -467,6 +366,20 @@ const MarqueeSection = () => {
 // ─── Projects ─────────────────────────────────────────────────────────────────
 const PROJECTS = [
   {
+    title: 'Hanok Grill (AI-Powered)',
+    description: 'High-end Korean restaurant platform with an AI recommendation engine (FastAPI) for personalized dish suggestions. Features Razorpay, reservations, and real-time emails.',
+    tech: ['React', 'Node.js', 'FastAPI', 'MongoDB', 'Razorpay'],
+    image: hanokImg,
+    demo: '#', source: GITHUB + '/Hanok-Grill',
+  },
+  {
+    title: 'NEXO (AI Orchestration)',
+    description: 'Autonomous Agent Manager that replaces PM with a "Neural Layer" of 4 agents: Planner, Matcher, Team Selection, and self-healing Replanning.',
+    tech: ['Python', 'FastAPI', 'Agentic AI', 'MongoDB', 'LangChain'],
+    image: nexoImg,
+    demo: '#', source: GITHUB,
+  },
+  {
     title: 'AI Resume Filter',
     description: 'NLP-powered candidate ranking by semantic matching against job descriptions. React dashboard + FastAPI backend.',
     tech: ['Python', 'spaCy', 'React', 'FastAPI'],
@@ -478,6 +391,13 @@ const PROJECTS = [
     description: 'Real-time AR garment overlay using OpenCV and WebRTC — try clothes virtually via webcam before buying.',
     tech: ['OpenCV', 'Flask', 'Three.js', 'WebRTC'],
     image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800',
+    demo: '#', source: GITHUB,
+  },
+  {
+    title: 'AI Resume Builder',
+    description: 'Advanced resume optimizer using LLMs to extract achievements and tailor content for job roles with real-time feedback and enhancement.',
+    tech: ['Python', 'Gemini AI', 'React', 'FastAPI'],
+    image: resumeBuilderImg,
     demo: '#', source: GITHUB,
   },
   {
@@ -528,16 +448,13 @@ const Projects = () => (
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
       >
-        <div className="section-label">Portfolio</div>
+        <div className="section-label">PORTFOLIO</div>
         <h2>
-          Featured{' '}
+          My{' '}
           <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'var(--primary-color)' }}>
-            Creations
+            Work
           </span>
         </h2>
-        <p className="section-subtitle">
-          Projects blending AI engineering, full-stack development, and creative problem-solving.
-        </p>
       </motion.div>
 
       <div className="projects-grid">
@@ -678,9 +595,9 @@ const Footer = () => (
         <div className="footer-logo">FARZEEN<span>.</span></div>
         <p className="footer-text">© 2026 Farzeen Memon · Fullstack AI Engineer · Fresher</p>
         <div className="social-links">
-          <a href={LINKEDIN} target="_blank" rel="noopener noreferrer" className="social-icon" title="LinkedIn"><FaLinkedin /></a>
-          <a href={GITHUB}   target="_blank" rel="noopener noreferrer" className="social-icon" title="GitHub"><FaGithub /></a>
-          <a href={`mailto:${EMAIL}`} className="social-icon" title="Email"><FaEnvelope /></a>
+          <a href={LINKEDIN} target="_blank" rel="noopener noreferrer" className="social-icon" title="LinkedIn"><FaLinkedin size={20} /></a>
+          <a href={GITHUB}   target="_blank" rel="noopener noreferrer" className="social-icon" title="GitHub"><FaGithub size={20} /></a>
+          <a href={`mailto:${EMAIL}`} className="social-icon" title="Email"><FaEnvelope size={20} /></a>
         </div>
       </div>
     </div>

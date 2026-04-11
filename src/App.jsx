@@ -370,14 +370,14 @@ const PROJECTS = [
     description: 'High-end Korean restaurant platform with an AI recommendation engine (FastAPI) for personalized dish suggestions. Features Razorpay, reservations, and real-time emails.',
     tech: ['React', 'Node.js', 'FastAPI', 'MongoDB', 'Razorpay'],
     image: hanokImg,
-    demo: '#', source: GITHUB + '/Hanok-Grill',
+    demo: '#', source: 'https://github.com/Farzeen-Memon/Hanok-Grill',
   },
   {
     title: 'NEXO (AI Orchestration)',
     description: 'Autonomous Agent Manager that replaces PM with a "Neural Layer" of 4 agents: Planner, Matcher, Team Selection, and self-healing Replanning.',
     tech: ['Python', 'FastAPI', 'Agentic AI', 'MongoDB', 'LangChain'],
     image: nexoImg,
-    demo: '#', source: GITHUB,
+    demo: '#', source: 'https://github.com/Farzeen-Memon/Autonomous-AI-Agent-Manager',
   },
   {
     title: 'AI Resume Filter',
@@ -405,7 +405,7 @@ const PROJECTS = [
     description: 'AI classifier identifying electronic waste types linked to certified recyclers, with a MERN stack logistics layer.',
     tech: ['TensorFlow', 'Node.js', 'React Native', 'MongoDB'],
     image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800',
-    demo: '#', source: GITHUB,
+    demo: 'https://phone-zone-e-waste.vercel.app/', source: 'https://github.com/Farzeen-Memon/PhoneZone-E-Waste',
   },
 ]
 
@@ -428,7 +428,7 @@ const ProjectCard = ({ project, index }) => (
         {project.tech.map(t => <span key={t} className="tech-tag">{t}</span>)}
       </div>
       <div className="project-actions">
-        <a href={project.demo} className="project-btn project-btn-primary">
+        <a href={project.demo} target="_blank" rel="noopener noreferrer" className="project-btn project-btn-primary">
           <ExternalLink size={13} /> Live Demo
         </a>
         <a href={project.source} target="_blank" rel="noopener noreferrer" className="project-btn project-btn-outline">

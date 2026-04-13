@@ -366,32 +366,11 @@ const MarqueeSection = () => {
 // ─── Projects ─────────────────────────────────────────────────────────────────
 const PROJECTS = [
   {
-    title: 'Hanok Grill (AI-Powered)',
-    description: 'High-end Korean restaurant platform with an AI recommendation engine (FastAPI) for personalized dish suggestions. Features Razorpay, reservations, and real-time emails.',
-    tech: ['React', 'Node.js', 'FastAPI', 'MongoDB', 'Razorpay'],
-    image: hanokImg,
-    demo: '#', source: 'https://github.com/Farzeen-Memon/Hanok-Grill',
-  },
-  {
     title: 'NEXO (AI Orchestration)',
     description: 'Autonomous Agent Manager that replaces PM with a "Neural Layer" of 4 agents: Planner, Matcher, Team Selection, and self-healing Replanning.',
     tech: ['Python', 'FastAPI', 'Agentic AI', 'MongoDB', 'LangChain'],
     image: nexoImg,
     demo: '#', source: 'https://github.com/Farzeen-Memon/Autonomous-AI-Agent-Manager',
-  },
-  {
-    title: 'AI Resume Filter',
-    description: 'NLP-powered candidate ranking by semantic matching against job descriptions. React dashboard + FastAPI backend.',
-    tech: ['Python', 'spaCy', 'React', 'FastAPI'],
-    image: 'https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&q=80&w=800',
-    demo: '#', source: GITHUB,
-  },
-  {
-    title: 'Virtual Try-On (AR)',
-    description: 'Real-time AR garment overlay using OpenCV and WebRTC — try clothes virtually via webcam before buying.',
-    tech: ['OpenCV', 'Flask', 'Three.js', 'WebRTC'],
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800',
-    demo: '#', source: GITHUB,
   },
   {
     title: 'AI Resume Builder',
@@ -406,6 +385,20 @@ const PROJECTS = [
     tech: ['TensorFlow', 'Node.js', 'React Native', 'MongoDB'],
     image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800',
     demo: 'https://phone-zone-e-waste.vercel.app/', source: 'https://github.com/Farzeen-Memon/PhoneZone-E-Waste',
+  },
+  {
+    title: 'Hanok Grill (AI-Powered)',
+    description: 'High-end Korean restaurant platform with an AI recommendation engine (FastAPI) for personalized dish suggestions. Features Razorpay, reservations, and real-time emails.',
+    tech: ['React', 'Node.js', 'FastAPI', 'MongoDB', 'Razorpay'],
+    image: hanokImg,
+    demo: '#', source: 'https://github.com/Farzeen-Memon/Hanok-Grill',
+  },
+  {
+    title: 'Prompt Compiler',
+    description: 'A specialized tool for optimizing LLM prompts using a custom compiler architecture, reducing token usage while improving accuracy.',
+    tech: ['Prompt Engineering', 'Python', 'LLMs', 'Optimization'],
+    image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800',
+    demo: '#', source: GITHUB,
   },
 ]
 

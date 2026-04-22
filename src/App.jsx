@@ -119,7 +119,7 @@ const Hero = () => (
           transition={{ duration: 0.85, delay: 0.42 }}
         >
           Fullstack
-          <span className="hero-title-accent">AI Engineer</span>
+          <span className="hero-title-accent">Engineer</span>
         </motion.h1>
 
         <motion.p
@@ -128,9 +128,9 @@ const Hero = () => (
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.56 }}
         >
-          A passionate fresher specializing in the MERN stack, focused on cutting edge AI
-          including machine learning, data science, agentic pipelines, and prompt engineering.
-          Building intelligent applications that create real impact.
+          Full Stack Engineer specialized in <span className="hero-text-highlight">AI</span> and <span className="hero-text-highlight">MERN stack</span> development, building scalable web applications, 
+          intelligent systems, and high-performance backend architectures. Focused on solving real-world 
+          problems through clean code, modern technologies, and impactful product engineering.
         </motion.p>
 
         <motion.div
@@ -586,7 +586,7 @@ const Footer = () => (
     <div className="container">
       <div className="footer-inner">
         <div className="footer-logo">FARZEEN<span>.</span></div>
-        <p className="footer-text">© 2026 Farzeen Memon · Fullstack AI Engineer · Fresher</p>
+        <p className="footer-text">© 2026 Farzeen Memon · Fullstack Engineer</p>
         <div className="social-links">
           <a href={LINKEDIN} target="_blank" rel="noopener noreferrer" className="social-icon" title="LinkedIn"><FaLinkedin size={20} /></a>
           <a href={GITHUB}   target="_blank" rel="noopener noreferrer" className="social-icon" title="GitHub"><FaGithub size={20} /></a>

@@ -288,6 +288,10 @@ img { display: block; max-width: 100%; }
   line-height: 1.8;
   margin-bottom: 2rem;
 }
+.hero-text-highlight {
+  color: var(--primary-color);
+  font-weight: 700;
+}
 
 .hero-cta { 
   display: flex; 
